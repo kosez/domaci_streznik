@@ -23,7 +23,7 @@ Ves promet med VLAN-i gre skozi firewall na routerju, ki po privzeti nastavitvi 
 Dostop od zunaj gre večinoma prek VPN, ne prek neposredno odprtih vrat na strežnik.
 Storitve, ki so dostopne navzven, gredo vse skozi reverse proxy s SSL.
 Brezžični dostop pokriva ena dostopna točka, ki oddaja dva ločena WiFi omrežja – eno za goste, eno za družinske naprave – vsak vezan na svoj VLAN.
-Diagram omrežja
+
 flowchart TB
     WAN((Internet))
     WAN --- FW
@@ -35,7 +35,7 @@ flowchart TB
 
     FW ---|trunk| SW["Managed switch"]
 
-    SW --- AP["Dostopna točka\n(2x SSID)"]
+    SW --- AP["Dostopna točka (2x SSID)"]
     SW --- SRV["Proxmox strežnik"]
 
     subgraph V1["VLAN: Gostje"]
@@ -55,6 +55,7 @@ flowchart TB
     SRV --- NPM
     SRV --- IMM
     SRV --- NC
+
 Kaj se učim ob tem
 Osnove Linux administracije in Docker Compose.
 Segmentacijo omrežja in firewall pravila.
