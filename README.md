@@ -25,8 +25,8 @@ Storitve, ki so dostopne navzven, gredo vse skozi reverse proxy s SSL.
 Brezžični dostop pokriva ena dostopna točka, ki oddaja dva ločena WiFi omrežja – eno za goste, eno za družinske naprave – vsak vezan na svoj VLAN.
 
 ## Diagram omrežja
-``` marmaid
-​flowchart TB
+``` mermaid
+flowchart TB
     WAN((Internet))
     WAN --- FW
 
@@ -57,7 +57,7 @@ Brezžični dostop pokriva ena dostopna točka, ki oddaja dva ločena WiFi omre�
     SRV --- NPM
     SRV --- IMM
     SRV --- NC
-    ```
+```
 Kaj se učim ob tem
 Osnove Linux administracije in Docker Compose.
 Segmentacijo omrežja in firewall pravila.
