@@ -1,28 +1,27 @@
 # Domaci streznik
-Moj homelab
-Kratek pregled tega, kar poganjam doma v prostem času – strežnik, nekaj storitev in domače omrežje.
+Kratek pregled tega, kar poganjam doma v prostem času strežnik, nekaj storitev in domače omrežje.
 
-Zakaj
-Rad eksperimentiram s self-hostingom – namesto da za vsako stvar plačujem naročnino v oblaku, raje gostim čim več sam, se ob tem nekaj naučim o Linuxu, omrežjih in kontejnerjih, ter obdržim nadzor nad svojimi podatki.
+# Zakaj
+Rad eksperimentiram s self-hostingom namesto, da za vsako stvar plačujem naročnino v oblaku, raje gostim čim več sam, se ob tem nekaj naučim o Linuxu, omrežjih in kontejnerjih, obdržim nadzor nad svojimi podatki in ne pošiljam podatkov in drugih datotek v tuje oblake.
 
-Strojna oprema
-En doma stoječi strežnik (računalnik), ki teče 24/7.
-Nekaj TB diskovnega prostora.
+# Strojna oprema
+Strežnik je oseben računalnik, ker omogoča tišje delovanje in malo porabo električne energije deluje 24/7.
+Nekaj TB prostora.
 Poraba je okrog 40 W v času mirovanja.
 Kot router uporabljam starejši računalnik, na katerem teče pfSense. Na njem imam nameščen tudi pfBlocker, ki blokira večino oglasov in nevarnih domen.
 Kaj teče na strežniku
 Na strežnik sem naložil Proxmox, v katerem imam VM-je, znotraj njih pa storitve tečejo v kontejnerjih, ločeno drug od druge.
 
-Nameščeno imam:
+# Nameščeno imam:
 
-Immich in Nextcloud – za shranjevanje slik in dokumentov.
-Nginx Proxy Manager – z avtomatskimi SSL certifikati, ki skrbi, da posamezne storitve niso neposredno izpostavljene navzven.
+Immich in Nextcloud za shranjevanje slik in dokumentov.
+Nginx Proxy Manager z avtomatskimi SSL certifikati, ki skrbi, da posamezne storitve niso neposredno izpostavljene navzven.
 Omrežje (na grobo)
 Domače omrežje je razdeljeno na več VLAN-ov – ločeno omrežje za "obiskovalce/IoT", ločeno za osebne naprave in ločeno za strežniško/homelab opremo, da morebiten problem na eni napravi ne ogrozi ostalih.
 Ves promet med VLAN-i gre skozi firewall na routerju, ki po privzeti nastavitvi vse blokira in dovoljuje samo eksplicitno odprta pravila.
 Dostop od zunaj gre večinoma prek VPN, ne prek neposredno odprtih vrat na strežnik.
 Storitve, ki so dostopne navzven, gredo vse skozi reverse proxy s SSL.
-Brezžični dostop pokriva ena dostopna točka, ki oddaja dva ločena WiFi omrežja – eno za goste, eno za družinske naprave – vsak vezan na svoj VLAN.
+Brezžični dostop pokriva ena dostopna točka, ki oddaja dva ločena WiFi omrežja eno za goste, eno za družinske naprave – vsak vezan na svoj VLAN.
 
 ## Diagram omrežja
 ``` mermaid
@@ -58,7 +57,7 @@ flowchart TB
     SRV --- IMM
     SRV --- NC
 ```
-Kaj se učim ob tem
+# Kaj se učim ob tem
 Osnove Linux administracije in Docker Compose.
 Segmentacijo omrežja in firewall pravila.
 Reverse proxy konfiguracijo in upravljanje SSL certifikatov.
