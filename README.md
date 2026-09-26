@@ -26,8 +26,7 @@ Brezžični dostop pokriva ena dostopna točka, ki oddaja dva ločena WiFi omre�
 
 ## Diagram omrežja
 
-​```mermaid
-flowchart TB
+​flowchart TB
     WAN((Internet))
     WAN --- FW
 
@@ -58,7 +57,7 @@ flowchart TB
     SRV --- NPM
     SRV --- IMM
     SRV --- NC
-​```
+    
 Kaj se učim ob tem
 Osnove Linux administracije in Docker Compose.
 Segmentacijo omrežja in firewall pravila.
