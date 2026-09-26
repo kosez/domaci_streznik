@@ -63,4 +63,4 @@ Segmentacijo omrežja in firewall pravila.
 Reverse proxy konfiguracijo in upravljanje SSL certifikatov.
 Kaj je za izboljšati
 Redne avtomatske posodobitve kontejnerjev.
-Avtomatski backup-i.
+Avtomatski backup-i preko Proxmox Backup Server-ja.
