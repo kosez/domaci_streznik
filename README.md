@@ -1,4 +1,4 @@
-# domaci_streznik
+# Domaci streznik
 Moj homelab
 Kratek pregled tega, kar poganjam doma v prostem času – strežnik, nekaj storitev in domače omrežje.
 
